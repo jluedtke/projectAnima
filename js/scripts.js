@@ -1,7 +1,11 @@
 //-----------------------------------------UI
 $(function() {
-  $("#new-game").click(function() {
-    $("div.puzzle").show();
+  $("#startForm").submit(function(event) {
+    event.preventDefault();
+    if ("think" == $("#start-page-text").val()) {
+      $("div.puzzle").show();
+      $(".start-page").hide();
+    }
 
     // var newGame = new Game(gameState);
 

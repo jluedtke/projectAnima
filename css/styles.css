@@ -1,0 +1,26 @@
+body {
+  background: black;
+  color: #53FF08;
+  font-family: 'VT323';
+}
+.puzzle, #start-button  {
+  display: none;
+}
+
+#start-page-text {
+  border: none;
+  width: 75px;
+  text-align: center;
+  background: black;
+}
+
+#start-page-text:focus {
+  outline: none;
+}
+
+#start-page-header {
+  text-align: center;
+  position: absolute;
+  top: 47%;
+  left: 44%;
+}
