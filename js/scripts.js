@@ -7,14 +7,14 @@ $(function() {
       $(".start-page").hide();
     }
 
-    // var newGame = new Game(gameState);
+    var newGame = new Game(1, false, false, false, false);
 
     $("span.option").click(function() {
       console.log($(this)[0].classList[0]);
 
-      var result = solvePuzzle($(this)[0].classList[0]);
 
-      if (result == true) {
+
+      if (newGame.solvePuzzle($(this)[0].classList[0]) == true) {
         $("#end-game").show();
       } else {
         alert("Try again.");
@@ -25,11 +25,30 @@ $(function() {
   });
 });
 //-----------------------------------------LOGIC
+function Game(puzzleState, visualState, motorState, securityState, coreState) {
+  this.puzzleState = puzzleState
+  this.visualState = visualState
+  this.motorState = motorState
+  this.securityState = securityState
+  this.coreState = coreState
+}
 
-function solvePuzzle(option) {
-  if (option == 2) {
-    return true;
-  } else {
-    return false;
+Game.prototype.solvePuzzle = function(option) {
+  if (puzzleState == undefined) {
+    if (option == 2) {
+      this.puzzleState++
+      this.coreState = true;
+      return true;
+    } else {
+      return false;
+    }
+  } else if (puzzleState == 1) {
+    if (option == 3) {
+      this.puzzleState++
+      this.visualState = true;
+      return true;
+    } else {
+      return false;
+    }
   }
 }
