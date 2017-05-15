@@ -3,6 +3,12 @@ body {
   color: #53FF08;
   font-family: 'VT323';
 }
+
+.panel-default {
+  background-color: #414141;
+  text-align: center;
+}
+
 .puzzle, #start-button  {
   display: none;
 }
@@ -23,4 +29,8 @@ body {
   position: absolute;
   top: 47%;
   left: 44%;
+}
+
+#power-button {
+  width: 100px;
 }
