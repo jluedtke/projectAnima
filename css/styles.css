@@ -2,16 +2,30 @@ body {
   background: black;
   color: #53FF08;
   font-family: 'VT323';
+
+  background-color: rgba(0, 0, 0, 0.6) !important;
+background-image: url('https://s-media-cache-ak0.pinimg.com/originals/af/6d/52/af6d5228b42a6769cccaed3c96e07ec9.jpg');
+background-blend-mode: color;
+}
+
+
+.panel-body {
+  height: 250px;
+  border: none;
+  box-shadow: 0 0 100px green;
+
 }
 
 .panel-default {
   background-color: #414141;
   text-align: center;
+  border: none;
 }
 
-.puzzle, #start-button  {
+.puzzle, #start-button, .start-page, #corePuzzle  {
   display: none;
 }
+
 
 #start-page-text {
   border: none;
@@ -33,4 +47,34 @@ body {
 
 #power-button {
   width: 100px;
+}
+
+.container {
+  margin: 0 10%;
+  padding: 0px;
+  width: 80%;
+}
+
+.mid-row {
+  position: absolute;
+  top: 39%;
+  left: 10%;
+  width: 60%;
+}
+
+.bot-row {
+  position: absolute;
+  bottom: 0px;
+}
+
+.game-hub-status {
+  color: red;
+}
+
+.panel-body h3 {
+  font-size: 40px;
+}
+
+.panel-body h2{
+  font-size: 32px;
 }
