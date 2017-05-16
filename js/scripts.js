@@ -2,9 +2,9 @@
 $(function() {
   $("#startForm").submit(function(event) {
     event.preventDefault();
-    if ("think" == $("#start-page-text").val()) {
-      $("#corePuzzle").show();
-      $(".start-page").hide();
+    if ("think" == $("#start-page-text").val().toLowerCase()) {
+      $("#corePuzzle").fadeIn();
+      $(".start-page").fadeOut();
     } else {
       return;
     };
@@ -12,8 +12,8 @@ $(function() {
 
     $("div.hub-option").click(function() {
       if ($(this)[0].classList[0] == "visual") {
-        $(".game-hub").hide();
-        $("#visualPuzzle").show();
+        $(".game-hub").fadeOut();
+        $("#visualPuzzle").fadeIn();
       }
     });
 
@@ -22,11 +22,13 @@ $(function() {
       debugger;
       if (newGame.solvePuzzle($(this)[0].classList[0]) == true) {
         if (newGame.visualState == true) {
-          $("#visualPuzzle").hide();
-          $(".game-hub").show();
+          $("#visualPuzzle").fadeOut();
+          $(".game-hub").fadeIn();
+          $("#visual-status").removeClass();
+          $("#visual-status").text("ONLINE");
         } else if (newGame.coreState == true) {
-          $("#corePuzzle").hide();
-          $(".game-hub").show();
+          $("#corePuzzle").fadeOut();
+          $(".game-hub").fadeIn();
         }
       } else {
         alert("Try again.");
@@ -62,5 +64,33 @@ Game.prototype.solvePuzzle = function(option) {
     } else {
       return false;
     }
+  }
+}
+
+Game.prototype.giveSecKey = function(solvePuzzle, puzzleState) {
+  var keyArr = [];
+  if(this.puzzleState == 1) {
+    if(newGame.solvePuzzle() == true) {
+      keyArr.push("puzzle 1 key");
+    }
+    return keyArr;
+  }
+  if(this.puzzleState == 2) {
+    if(newGame.solvePuzzle() == true) {
+      keyArr.push("puzzle 2 key");
+    }
+    return keyArr;
+  }
+  if(this.puzzleState == 3) {
+    if(newGame.solvePuzzle() == true) {
+      keyArr.push("puzzle 3 key");
+    }
+    return keyArr;
+  }
+  if(this.puzzleState == 4) {
+    if(newGame.solvePuzzle() == true) {
+      keyArr.push("puzzle 4 key");
+    }
+    return keyArr;
   }
 }
