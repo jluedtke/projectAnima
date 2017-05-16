@@ -5,36 +5,37 @@ $(function() {
     if ("think" == $("#start-page-text").val()) {
       $("div.puzzle").show();
       $(".start-page").hide();
-    }
-
-    var newGame = new Game(1, false, false, false, false);
+    } else {
+      return;
+    };
+    var newGame = new Game(1, false, false, false, false, false);
 
     $("span.option").click(function() {
       console.log($(this)[0].classList[0]);
 
-
-
       if (newGame.solvePuzzle($(this)[0].classList[0]) == true) {
-        $("#end-game").show();
+        if (this.coreState = true) {
+          $("#corePuzzle").hide();
+          $(".game-hub").show();
+        }
       } else {
         alert("Try again.");
       }
     });
-
-
   });
 });
 //-----------------------------------------LOGIC
-function Game(puzzleState, visualState, motorState, securityState, coreState) {
-  this.puzzleState = puzzleState
-  this.visualState = visualState
-  this.motorState = motorState
-  this.securityState = securityState
-  this.coreState = coreState
+function Game(puzzleState, visualState, motorState, securityState, coreState, powerState) {
+  this.puzzleState = puzzleState;
+  this.visualState = visualState;
+  this.motorState = motorState;
+  this.securityState = securityState;
+  this.coreState = coreState;
+  this.powerState = powerState;
 }
 
 Game.prototype.solvePuzzle = function(option) {
-  if (puzzleState == undefined) {
+  if (this.puzzleState == 1) {
     if (option == 2) {
       this.puzzleState++
       this.coreState = true;
@@ -42,7 +43,7 @@ Game.prototype.solvePuzzle = function(option) {
     } else {
       return false;
     }
-  } else if (puzzleState == 1) {
+  } else if (this.puzzleState == 2) {
     if (option == 3) {
       this.puzzleState++
       this.visualState = true;

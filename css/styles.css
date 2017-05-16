@@ -4,8 +4,8 @@ body {
   font-family: 'VT323';
 
   background-color: rgba(0, 0, 0, 0.6) !important;
-background-image: url('https://s-media-cache-ak0.pinimg.com/originals/af/6d/52/af6d5228b42a6769cccaed3c96e07ec9.jpg');
-background-blend-mode: color;
+  background-image: url('https://s-media-cache-ak0.pinimg.com/originals/af/6d/52/af6d5228b42a6769cccaed3c96e07ec9.jpg');
+  background-blend-mode: color;
 }
 
 
@@ -22,7 +22,7 @@ background-blend-mode: color;
   border: none;
 }
 
-.puzzle, #start-button, .start-page, #corePuzzle  {
+#start-button, .game-hub, #corePuzzle  {
   display: none;
 }
 
@@ -32,6 +32,7 @@ background-blend-mode: color;
   width: 75px;
   text-align: center;
   background: black;
+  background: none;
 }
 
 #start-page-text:focus {
@@ -77,4 +78,36 @@ background-blend-mode: color;
 
 .panel-body h2{
   font-size: 32px;
+}
+
+#corePuzzle {
+  position: absolute;
+  top: 20%;
+  text-align: justify;
+  background: black;
+  border: 5px solid gray;
+  box-shadow: 0 0 100px white;
+  border-radius: 15px;
+}
+
+#corePuzzle .row {
+  width: auto;
+  margin: 10px 20px;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 28px;
+  text-align: center;
+}
+
+.option-list {
+  list-style-type: decimal;
+  text-align: left;
+}
+
+span:hover {
+  background: #53FF08;
+  color: black;
+  cursor: pointer;
 }
