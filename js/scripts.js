@@ -3,18 +3,28 @@ $(function() {
   $("#startForm").submit(function(event) {
     event.preventDefault();
     if ("think" == $("#start-page-text").val()) {
-      $("div.puzzle").show();
+      $("#corePuzzle").show();
       $(".start-page").hide();
     } else {
       return;
     };
     var newGame = new Game(1, false, false, false, false, false);
 
-    $("span.option").click(function() {
-      console.log($(this)[0].classList[0]);
+    $("div.hub-option").click(function() {
+      if ($(this)[0].classList[0] == "visual") {
+        $(".game-hub").hide();
+        $("#visualPuzzle").show();
+      }
+    });
 
+
+    $("span.option").click(function() {
+      debugger;
       if (newGame.solvePuzzle($(this)[0].classList[0]) == true) {
-        if (this.coreState = true) {
+        if (newGame.visualState == true) {
+          $("#visualPuzzle").hide();
+          $(".game-hub").show();
+        } else if (newGame.coreState == true) {
           $("#corePuzzle").hide();
           $(".game-hub").show();
         }
@@ -35,6 +45,7 @@ function Game(puzzleState, visualState, motorState, securityState, coreState, po
 }
 
 Game.prototype.solvePuzzle = function(option) {
+  debugger;
   if (this.puzzleState == 1) {
     if (option == 2) {
       this.puzzleState++

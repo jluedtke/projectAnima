@@ -27,7 +27,7 @@
       <div class="container top-row">
         <div class="row">
           <div class="col-md-4">
-            <div class="panel panel-default">
+            <div class="visual hub-option panel panel-default">
               <div class="panel-body">
                 <h3>Visual Input Device</h3>
                 <br><br><br><br>
@@ -37,7 +37,7 @@
           </div>
 
           <div class="col-md-4">
-            <div class="panel panel-default">
+            <div class="motor hub-option panel panel-default">
               <div class="panel-body">
                 <h3>Motor Functionality</h3>
                 <br><br><br><br>
@@ -47,7 +47,7 @@
           </div>
 
           <div class="col-md-4">
-            <div class="panel panel-default">
+            <div class="security hub-option panel panel-default">
               <div class="panel-body">
                 <h3>Security Credentials</h3>
                 <br><br><br><br>
@@ -92,7 +92,7 @@
       <div class="container bot-row">
         <div class="row">
           <div class="col-md-4">
-            <div class="panel panel-default">
+            <div class="security-key hub-option panel panel-default">
               <div class="panel-body">
                 <h3>Security Key Display</h3>
               </div>
@@ -110,7 +110,7 @@
           </div>
 
           <div class="col-md-4">
-            <div class="panel panel-default">
+            <div class="reports hub-option panel panel-default">
               <div class="panel-body">
                 <h3>Known Reports</h3>
               </div>
@@ -138,7 +138,7 @@
         <ul class="option-list">
           <li><span class="1 option">Node 1 is reporting correctly</span></li>
           <li><span class="2 option">Node 2 is reporting correctly</span></li>
-          <li><span class="3 option">Nore 3 is reporting correctly</span></li>
+          <li><span class="3 option">Node 3 is reporting correctly</span></li>
         </ul>
       </div>
       <!-- Output Row  -->
@@ -148,5 +148,53 @@
         </p>
       </div>
     </div>
+
+    <!-- Puzzle for visualState -->
+    <div class="container puzzle" id="visualPuzzle">
+      <!-- Problem Row  -->
+      <div class="row">
+        <ul>
+          <li>Initializing . . . . FAILED</li>
+          <li>Diagnostics Check . . . . GREEN</li>
+          <ul>
+            <li>RAM check . . . . GREEN</li>
+            <li>ROM check . . . . GREEN</li>
+            <li>Disc check . . . . GREEN</li>
+          </ul>
+          <li>Listing Visual Receptors</li>
+            <ul>
+              <li>Visual Input - Partition 1 . . . . GREEN</li>
+              <li>Visual Input - Partition 2 . . . . GREEN</li>
+              <li>Visual Input - Partition 3 . . . . GREEN</li>
+              <li>Visual Input - Partition 4 . . . . GREEN</li>
+              <li>Visual Input - Partition 5 . . . . GREEN</li>
+              <li>Visual Input - Partition 6 . . . . FAILED</li>
+            </ul>
+          <li>MISSING PARTITION</li>
+          <li>MANUAL ACCESS REQUIRED</li>
+          <li>Add the missing visual node based upon current randomized pattern.</li>
+        </ul>
+        <h4>[4] [14] [11-14] [31-14] [21-13-14]</h4>
+      </div>
+      <!-- Puzzle Row  -->
+      <div class="row">
+        <ul class="option-list">
+          <li><span class="1 option">[13-21-31-14]</span></li>
+          <li><span class="2 option">[21-13-24-14]</span></li>
+          <li><span class="3 option">[31-13-12-14]</span></li>
+          <li><span class="4 option">[32-13-14-31]</span></li>
+        </ul>
+      </div>
+      <!-- Output Row  -->
+      <div class="row">
+        <p id="tag name goes here">
+
+        </p>
+      </div>
+    </div>
+
+
+
+
   </body>
 </html>

@@ -12,7 +12,12 @@ body {
 .panel-body {
   height: 250px;
   border: none;
-  box-shadow: 0 0 100px green;
+  box-shadow: 0 0 100px darkgreen;
+  cursor: pointer;
+}
+
+.panel-body:hover {
+  box-shadow: 0 0 150px green;
 
 }
 
@@ -20,9 +25,11 @@ body {
   background-color: #414141;
   text-align: center;
   border: none;
+  border-radius: 5px;
+
 }
 
-#start-button, .game-hub, #corePuzzle  {
+#start-button, .game-hub, #corePuzzle, #visualPuzzle  {
   display: none;
 }
 
@@ -80,7 +87,7 @@ body {
   font-size: 32px;
 }
 
-#corePuzzle {
+#corePuzzle, #visualPuzzle {
   position: absolute;
   top: 20%;
   text-align: justify;
@@ -90,9 +97,14 @@ body {
   border-radius: 15px;
 }
 
-#corePuzzle .row {
+#corePuzzle .row, #visualPuzzle .row{
   width: auto;
   margin: 10px 20px;
+}
+
+#visualPuzzle h4 {
+  text-align: left;
+  font-size: 32px;
 }
 
 ul {
