@@ -26,6 +26,7 @@ $(function() {
           $(".game-hub").fadeIn();
           $("#visual-status").removeClass();
           $("#visual-status").text("ONLINE");
+          document.getElementById('visual-div').style.pointerEvents = 'none';
         } else if (newGame.coreState == true) {
           $("#corePuzzle").fadeOut();
           $(".game-hub").fadeIn();
