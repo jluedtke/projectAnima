@@ -68,7 +68,7 @@ body {
 .mid-row {
   position: absolute;
   top: 39%;
-  left: 10%;
+  left: 15%;
   width: 60%;
 }
 
@@ -168,4 +168,16 @@ button:focus {
 
 .secKeyHints {
   font-size: 15px;
+  margin: 1px 4px;
+  padding: 0px;
+  text-align: left;
+  list-style-type: decimal;
+}
+
+.mid-row .col-md-4 {
+  width: 430px;
+}
+
+.secKeyDisplay .panel-body h2 {
+  margin-top: 2px;
 }

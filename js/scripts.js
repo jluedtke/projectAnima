@@ -28,7 +28,10 @@ $(function() {
       } else if ($(this)[0].classList[0] == "security") {
         $(".secKeyInput").fadeToggle();
       } else if($(this)[0].classList[0] == "security-key") {
-        $(".secKeyHints").text(newGame.secKeyHints)
+        $(".secKeyHints").text("");
+        for (var i = 0; i < newGame.secKeyHints.length; i++) {
+          $(".secKeyHints").append("<li>" + newGame.secKeyHints[i] + "</li>")
+        }
         $(".secKeyDisplay").fadeToggle();
       }else if ($(this)[0].classList[0] == "power") {
 
