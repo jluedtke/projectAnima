@@ -3,8 +3,9 @@ $(function() {
   $("#startForm").submit(function(event) {
     event.preventDefault();
     if ("think" == $("#start-page-text").val().toLowerCase()) {
-      $("#corePuzzle").fadeIn();
       $(".start-page").fadeOut();
+      $(".intro").fadeIn().delay(17000).fadeOut();
+      $("#corePuzzle").delay(17500).fadeIn();
     } else {
       return;
     };
@@ -117,7 +118,10 @@ $(function() {
 					$("span#malfunction-count").text(newGame.malfunctionCount + " ");
 					$(".alert").slideDown().delay(3000).slideUp()
 				} else {
-					alert("Game Over.")
+					alert("MALFUNCTION COUNT EXCEEDED KNOWN PARAMETERS. SYSTEM CRASH.");
+          for (var i = 1; i > 0; i++) {
+            newGame.crash.push(i);
+          }
 				}
       }
     });
@@ -132,6 +136,7 @@ function Game(malfunctionCount, puzzleState, visualState, motorState, securitySt
   this.securityState = securityState;
   this.coreState = coreState;
   this.powerState = powerState;
+  this.crash = [];
 }
 
 Game.prototype.solvePuzzle = function(option) {
