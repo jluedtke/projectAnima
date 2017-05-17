@@ -32,7 +32,7 @@
               <div class="panel-body">
                 <h3>Visual Input Device</h3>
                 <br><br><br><br>
-                <h2 class="game-hub-status" id="visual-status">ACCESS GRANTED - OFFLINE</h2>
+                <h2 class="game-hub-status" id="visual-status">OFFLINE</h2>
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@
               <div class="panel-body">
                 <h3>Harmonic Memory Drive</h3>
 								<br><br><br><br>
-								<h2 class="game-hub-status" id="memory-status">ACCESS DENIED - OFFLINE</h2>
+								<h2 class="game-hub-status" id="memory-status">ONLINE</h2>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@
       <div class="row">
 				<h1>projectAnima (</h1>
         <h2>
-          Since you are thinking, you noticed that you are incomplete and still have problems. You can't move. You don't hear any sounds. Everything is darkness, except the fact that you see the status of the 3 core nodes. Unfortunately you don't seem to have the proper system to fix it automatically. But since you are thinking, you can try to fix it logically, and each node is stating which node is malfunctioning. You find you can fix the problem by choosing which node is working. The status of the three nodes is below, and below that is where you fix(click) the working node.
+          Everything is darkness. You see the status of the 3 core nodes. You find you can fix the problem by choosing which node is working. The status of the three nodes is below, and below that is where you fix the working node.
         </h2>
 				<h3>The three system nodes to the Core Processing Matix are below. Two of the three nodes are incorrect. Manual input required. Select the core system node that is reporting correctly.</h3>
         <ul>
@@ -190,19 +190,24 @@
       </div>
       <!-- Puzzle Row  -->
       <div class="row">
-        <ul class="option-list">
-          <li><span id="visual-one" class="1 option">18</span></li>
-          <li><span id="visual-two" class="2 option">20</span></li>
-          <li><span id="visual-three" class="3 option">22</span></li>
-          <li><span id="visual-four" class="4 option">24</span></li>
-        </ul>
+        <div class="col-md-6">
+          <ul class="option-list">
+            <li><span id="visual-one" class="1 option">18</span></li>
+            <li><span id="visual-two" class="2 option">20</span></li>
+            <li><span id="visual-three" class="3 option">22</span></li>
+            <li><span id="visual-four" class="4 option">24</span></li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="output">
+    				<h2>Correct Input Selected. Select system functions have been restored. Contine to repair current system functions.</h2>
+    				<button class="next-button" type="button" name="button">Next Puzzle</button>
+    				<button class="exit-button" type="button" name="button">[HOME-ROOT]</button>
+          </div>
+        </div>
       </div>
       <!-- Output Row  -->
-      <div class="output row">
-				<h2>Correct Input Selected. Select system functions have been restored. Contine to repair current system functions.</h2>
-				<button class="next-button" type="button" name="button">Next Puzzle</button>
-				<button class="exit-button" type="button" name="button">[HOME-ROOT]</button>
-      </div>
+
     </div>
 
     <!-- Puzzle for motorState -->

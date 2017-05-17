@@ -4,8 +4,8 @@ $(function() {
     event.preventDefault();
     if ("think" == $("#start-page-text").val().toLowerCase()) {
       $(".start-page").fadeOut();
-      $(".intro").fadeIn().delay(1700).fadeOut();
-      $("#corePuzzle").delay(1750).fadeIn();
+      $(".intro").fadeIn().delay(17000).fadeOut();
+      $("#corePuzzle").delay(17500).fadeIn();
     } else {
       return;
     };
@@ -13,7 +13,6 @@ $(function() {
 
 
 		document.getElementById('motor-div').style.pointerEvents = 'none'; // Make un-clickable
-		document.getElementById('memory-div').style.pointerEvents = 'none';
 		document.getElementById('core-div').style.pointerEvents = 'none';
     document.getElementById('power-div').style.pointerEvents = 'none';
 
@@ -22,9 +21,11 @@ $(function() {
       if ($(this)[0].classList[0] == "visual") {
         $(".game-hub").fadeOut();
         $("#visualPuzzle").fadeIn();
+        $(".secKeyDisplay").hide(); // hides secKey to force update
       } else if ($(this)[0].classList[0] == "motor") {
 				$(".game-hub").fadeOut();
         $("#motorPuzzle").fadeIn();
+        $(".secKeyDisplay").hide(); // hides secKey to force update
       } else if ($(this)[0].classList[0] == "security") {
         $(".secKeyInput").fadeToggle();
       } else if($(this)[0].classList[0] == "security-key") {
@@ -33,8 +34,8 @@ $(function() {
           $(".secKeyHints").append("<li>" + newGame.secKeyHints[i] + "</li>")
         }
         $(".secKeyDisplay").fadeToggle();
-      }else if ($(this)[0].classList[0] == "power") {
-
+      }else if ($(this)[0].classList[0] == "memory") {
+        window.open("textrpg.html");
       }
     });
 
@@ -47,8 +48,13 @@ $(function() {
         $(".game-hub").fadeIn();
         $("#power-status").removeClass();
         $("#power-status").text("ACCESS GRANTED - OFFLINE");
-      };
-    })
+      }else {
+        alert("WRONG KEY ENTERED. SYSTEM CRASH IMMENENT...")
+        for (var i = 1; i > 0; i++) {
+          newGame.crash.push(i);
+        }
+      }
+    });
 
 		var nextPuzzle = 2;  // multiple puzzle selector (start at 2 in order to keep even with puzzleSelector prototype)
 		$(".next-button").click(function() {
@@ -117,7 +123,6 @@ $(function() {
 					$("#motor-status").text("ACCESS DENIED - ONLINE");
 					$("#memory-status").text("ACCESS GRANTED - OFFLINE");
 					document.getElementById('motor-div').style.pointerEvents = 'none';
-					document.getElementById('memory-div').style.pointerEvents = 'auto';
 				} else if (newGame.visualState == true && newGame.puzzleState == 6) { // puzzleState when visualState was defined true
 					$(".output").show();
 					$(".exit-button").show();
@@ -133,6 +138,7 @@ $(function() {
         } else if (newGame.coreState == true && newGame.puzzleState == 2) {
           $("#corePuzzle").fadeOut();
           $(".game-hub").fadeIn();
+          $("#memory-status").removeClass();
         } else {
 					$(".output").fadeIn();
 				}
@@ -166,11 +172,10 @@ function Game(malfunctionCount, puzzleState, visualState, motorState, securitySt
 
 Game.prototype.solvePuzzle = function(option) {
   if (this.puzzleState == 1) { // core Node puzzle
-    this.secKeyHints.push("There are only 4 words....");
     if (option == 2) {
+      this.secKeyHints.push("There are only 4 words");
       this.puzzleState++;
       this.coreState = true;
-      this.secKeyHints.push("The first letter is 'I'...");
       return true;
     } else {
       return false;  // Can we put this at the end of IF/ELSE to dry code?
@@ -178,7 +183,7 @@ Game.prototype.solvePuzzle = function(option) {
   } else if (this.puzzleState == 2) {
     if (option == 3) { // visual node puzzle 1
       this.puzzleState++;
-      this.secKeyHints.push("Each word is 1 character longer than the previous...except the last word.");
+      this.secKeyHints.push("Each word is 1 character longer than the previous, except the last word which is 2.");
       return true;
     } else {
       return false;
@@ -186,7 +191,7 @@ Game.prototype.solvePuzzle = function(option) {
   } else if (this.puzzleState == 3) {
 		if (option == 4) { // visual node puzzle 2
 			this.puzzleState++;
-      this.secKeyHints.push("Each word does not use vowels from other words...");
+      this.secKeyHints.push("Each word does not use vowels from other words, ");
 			return true;
 		} else {
 			return false;
@@ -194,7 +199,7 @@ Game.prototype.solvePuzzle = function(option) {
 	} else if (this.puzzleState == 4) {
 		if (option == 1) { // visual node puzzle 3
 			this.puzzleState++;
-      this.secKeyHints.push("'O' comes before and after 'B'...");
+      this.secKeyHints.push("'O' comes before and after 'B', ");
 			return true;
 		} else {
 			return false;
@@ -203,7 +208,7 @@ Game.prototype.solvePuzzle = function(option) {
 		if (option == 2) { // visual node puzzle 4
 			this.puzzleState++;
 			this.visualState = true;
-      this.secKeyHints.push("The middle letter is 'E'...");
+      this.secKeyHints.push("The middle letter is 'E', ");
 			return true;
 		} else {
 			return false;
@@ -211,7 +216,7 @@ Game.prototype.solvePuzzle = function(option) {
 	} else if (this.puzzleState == 6) {
 		if (option == 2) { // motor function puzzle 1
 			this.puzzleState++;
-      this.secKeyHints.push("'T' comes after 'O'...");
+      this.secKeyHints.push("'T' comes after 'O', ");
 			return true;
 		} else {
 			return false;
@@ -219,7 +224,7 @@ Game.prototype.solvePuzzle = function(option) {
 	} else if (this.puzzleState == 7) {
 		if (option == 1) { // motor function puzzle 2
 			this.puzzleState++
-      this.secKeyHints.push("'H' is the middle letter in the last word...");
+      this.secKeyHints.push("'H' is the middle letter in the last word, ");
 			return true;
 		} else {
 			return false;
@@ -228,6 +233,7 @@ Game.prototype.solvePuzzle = function(option) {
 		if (option == 3) { // motor function puzzle 3
 			this.puzzleState++;
 			this.motorState = true;
+      this.secKeyHints.push("The first letter is 'I', ");
 			return true;
 		} else {
 			return false;

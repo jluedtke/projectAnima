@@ -20,9 +20,9 @@ body {
 }
 
 .panel-default {
-  background-color: #414141;
+  background-color: #000000;
   text-align: center;
-  border: none;
+  border: 1px solid darkgreen;
   border-radius: 5px;
 
 }
@@ -42,7 +42,9 @@ body {
 #start-page-text:focus {
   outline: none;
 }
-
+#secKeyInput{
+  background: black;
+}
 #secKeyInput:focus {
   outline: none;
 }
@@ -185,4 +187,8 @@ button:focus {
 .office-runaway-form, .sit-form, .office-fight-form, .resist-form, .resist-two-form, .follow-form {
   display: none;
 
+}
+
+.output {
+  float: right;
 }
