@@ -163,6 +163,7 @@ button:focus {
 }
 
 
+
 .intro, .secKeyInput, .secKeyDisplay{
   text-align: center;
   padding: 10px;
@@ -184,7 +185,7 @@ button:focus {
   margin-top: 2px;
 }
 
-.office-runaway-form, .sit-form, .office-fight-form, .resist-form, .resist-two-form, .follow-form {
+.office-runaway-form, .sit-form, .office-fight-form, .resist-form, .resist-two-form, .follow-form, .operating-room-form, .try-escape, .hide-attempt, .ending-scene{
   display: none;
 
 }
