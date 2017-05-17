@@ -8,6 +8,8 @@ $(function() {
       $(".office-runaway-form").fadeIn();
     } else if ($(this)[0].classList[0] == "follow") {
       $(".intro-form").fadeOut();
+      $(".office-fight-form").fadeOut();
+      $(".sit-form").fadeOut();
       $(".resist-form").fadeOut();
       $(".follow-form").fadeIn();
     } else if ($(this)[0].classList[0] == "sit") {
