@@ -33,5 +33,19 @@ $(function() {
       $(".follow-form").fadeOut();
       $(".operating-room-form").fadeIn();
     }
+
+    if ($(this)[0].classList[0] == "escape") {
+      $(".operating-room-form").fadeOut();
+      $(".try-escape").fadeIn();
+      $(".hide-attempt").fadeIn();
+      $(".ending-scene").fadeIn();
+    }
+    else if ($(this)[0].classList[0] == "scan-room") {
+      $(".operating-room-form").fadeOut();
+      $(".hide-attempt").fadeIn();
+      
+      $(".ending-scene").fadeIn();
+    }
+
   });
 });
