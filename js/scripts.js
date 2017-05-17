@@ -60,7 +60,7 @@ $(function() {
 				$("#motor-four").text("21")
 			} else if (nextPuzzle == 8) { // motor function puzzle 3
 				$("#right-arm").text("GREEN").removeClass();
-				$("#motor-puzzle-text").text("Data missing from [RIGHT-LEG] memory node: [4] - [11-14] [31-14] [21-13-14] [3?-13-??-??] Recalibrate system with manual placement of prime value.")
+				$("#motor-puzzle-text").text("Data missing from [RIGHT-LEG] memory node: [4] [11-14] [31-14] [21-13-14] [3?-13-??-??]")
 				$("#motor-one").text("[32-13-31-14]")
 				$("#motor-two").text("[32-13-24-14]")
 				$("#motor-three").text("[31-13-12-14]")
@@ -74,6 +74,9 @@ $(function() {
 		$(".exit-button").click(function () {
 			$(".puzzle").fadeOut();
 			$(".game-hub").fadeIn();
+      $(".next-button").show();
+      $(".output").hide();
+      $(".exit-button").hide();
 		})
 
     $("span.option").click(function() {
