@@ -28,7 +28,7 @@ body {
 
 }
 
-#start-button, .game-hub, #corePuzzle, #visualPuzzle, #motorPuzzle, .output, .exit-button, .alert, .intro {
+#start-button, .game-hub, #corePuzzle, #visualPuzzle, #motorPuzzle, .output, .exit-button, .alert, .intro, .secKeyInput, .secKeyDisplay {
   display: none;
 }
 
@@ -41,6 +41,10 @@ body {
 }
 
 #start-page-text:focus {
+  outline: none;
+}
+
+#secKeyInput:focus {
   outline: none;
 }
 
@@ -85,7 +89,7 @@ body {
   font-size: 32px;
 }
 
-#corePuzzle, #visualPuzzle, #motorPuzzle, .intro {
+#corePuzzle, #visualPuzzle, #motorPuzzle, .intro, .secKeyInput, .secKeyDisplay {
   position: absolute;
   top: 20%;
   text-align: justify;
@@ -157,7 +161,11 @@ button:focus {
 	outline: 0;
 }
 
-.intro {
+.intro, .secKeyInput, .secKeyDisplay{
   text-align: center;
   padding: 10px;
+}
+
+.secKeyHints {
+  font-size: 15px;
 }

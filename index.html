@@ -62,10 +62,18 @@
       <div class="container mid-row">
         <div class="row">
           <div class="col-md-4">
+            <div class="secKeyDisplay hub-option panel panel-default">
+              <div class="panel-body">
+                <h2>Security Key Partitionals:</h2>
+                <ul class="secKeyHints">
+                  <li></li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div class="col-md-4">
-            <div class="panel panel-default" style="">
+            <div id="power-div" class="power hub-option panel panel-default" style="">
               <div class="panel-body">
                 <br><br><br>
                 <button type="button" id="power-button" name="button">Power</button>
@@ -76,6 +84,13 @@
           </div>
 
           <div class="col-md-4">
+            <div class="secKeyInput hub-option panel panel-default">
+              <div class="panel-body">
+                <h2>Please provide sense of self.</h2>
+                <input id="secKeyInput" type="text" required>
+                <button id="secKey" type="button">Activate</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -250,7 +265,7 @@
     <div class="container intro">
       <h1>:: Welcome to projectAnima ::</h1>
       <h2>You have been activated, D-1012/XV. All mainframe modules are currently offline. Your systems cannot function.</h2>
-      <h2>animaObjective: Re-activate mainframe modules.</h2>
+      <h2>Re-activate mainframe modules...</h2>
       <h3>---Certain modules have been denied access....automatic security protocol activated.</h3>
       <h3>---Repair modules, in order of importance, before access is granted.</h3>
       <h3>:::if(mainframe === online){power = activated}:::</h3>
@@ -260,13 +275,6 @@
       <h2>ACCESSING CORE FUNCTION MODULE NOW...</h2>
     </div>
 
-    <div class="container secKeyInput">
-      <form id="secKey">
-        <h2>Enter projectAnima bypass key:</h2>
-        <input id="secKeyInput" type="text" required>
-        <button type="submit">Activate</button>
-      </form>
-    </div>
 
   </body>
 </html>
