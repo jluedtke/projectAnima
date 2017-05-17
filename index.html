@@ -6,10 +6,11 @@
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Project Anima</title>
+    <title>projectAnima</title>
   </head>
 
   <body>
+
 
     <!-- Start Page -->
     <div class="container">
@@ -31,17 +32,17 @@
               <div class="panel-body">
                 <h3>Visual Input Device</h3>
                 <br><br><br><br>
-                <h2 class="game-hub-status" id="visual-status">OFFLINE</h2>
+                <h2 class="game-hub-status" id="visual-status">ACCESS GRANTED - OFFLINE</h2>
               </div>
             </div>
           </div>
 
           <div class="col-md-4">
-            <div class="motor hub-option panel panel-default">
+            <div id="motor-div" class="motor hub-option panel panel-default">
               <div class="panel-body">
                 <h3>Motor Functionality</h3>
                 <br><br><br><br>
-                <h2 class="game-hub-status" id="motor-status">OFFLINE</h2>
+                <h2 class="game-hub-status" id="motor-status">ACCESS DENIED - OFFLINE</h2>
               </div>
             </div>
           </div>
@@ -61,11 +62,6 @@
       <div class="container mid-row">
         <div class="row">
           <div class="col-md-4">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <h3>Display</h3>
-              </div>
-            </div>
           </div>
 
           <div class="col-md-4">
@@ -74,17 +70,12 @@
                 <br><br><br>
                 <button type="button" id="power-button" name="button">Power</button>
                 <br><br><br><br>
-                <h2 class="game-hub-status" id="power-status">LOCKED</h2>
+                <h2 class="game-hub-status" id="power-status">ACCESS DENIED - LOCKED</h2>
               </div>
             </div>
           </div>
 
           <div class="col-md-4">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <h3>Display</h3>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -100,19 +91,21 @@
           </div>
 
           <div class="col-md-4">
-            <div class="panel panel-default">
+            <div id="core-div" class="panel panel-default">
               <div class="panel-body">
                 <h3>Core Proccessing</h3>
                 <br><br><br><br>
-                <h2>ONLINE</h2>
+                <h2>ACCESS DENIED - ONLINE</h2>
               </div>
             </div>
           </div>
 
           <div class="col-md-4">
-            <div class="reports hub-option panel panel-default">
+            <div id="memory-div" class="memory hub-option panel panel-default">
               <div class="panel-body">
-                <h3>Known Reports</h3>
+                <h3>Harmonic Memory Drive</h3>
+								<br><br><br><br>
+								<h2 class="game-hub-status" id="memory-status">ACCESS DENIED - OFFLINE</h2>
               </div>
             </div>
           </div>
@@ -124,21 +117,23 @@
     <div class="container puzzle" id="corePuzzle">
       <!-- Problem Row  -->
       <div class="row">
+				<h1>projectAnima (</h1>
         <h2>
           Since you are thinking, you noticed that you are incomplete and still have problems. You can't move. You don't hear any sounds. Everything is darkness, except the fact that you see the status of the 3 core nodes. Unfortunately you don't seem to have the proper system to fix it automatically. But since you are thinking, you can try to fix it logically, and each node is stating which node is malfunctioning. You find you can fix the problem by choosing which node is working. The status of the three nodes is below, and below that is where you fix(click) the working node.
         </h2>
+				<h3>The three system nodes to the Core Processing Matix are below. Two of the three nodes are incorrect. Manual input required. Select the core system node that is reporting correctly.</h3>
         <ul>
-          <li>Node 1 is stating that Node 2 is malfunctioning.</li>
-          <li>Node 2 is stating that Node 3 is malfunctioning.</li>
-          <li>Node 3 is stating that Node 2 is malfunctioning.</li>
+          <li>Node 1 is reporting that Node 2 is malfunctioning.</li>
+          <li>Node 2 is reporting that Node 3 is malfunctioning.</li>
+          <li>Node 3 is reporting that Node 2 is malfunctioning.</li>
         </ul>
       </div>
       <!-- Puzzle Row  -->
       <div class="row">
         <ul class="option-list">
-          <li><span class="1 option">Node 1 is reporting correctly</span></li>
-          <li><span class="2 option">Node 2 is reporting correctly</span></li>
-          <li><span class="3 option">Node 3 is reporting correctly</span></li>
+          <li><span class="1 option">Node 1 is reporting correctly.</span></li>
+          <li><span class="2 option">Node 2 is reporting correctly.</span></li>
+          <li><span class="3 option">Node 3 is reporting correctly.</span></li>
         </ul>
       </div>
       <!-- Output Row  -->
@@ -153,9 +148,10 @@
     <div class="container puzzle" id="visualPuzzle">
       <!-- Problem Row  -->
       <div class="row">
+				<h1>projectAnima (</h1>
         <ul>
           <li>Core Functions . . . . GREEN</li>
-          <li>Initializing . . . . FAILED</li>
+          <li>Initializing Visual Memory Input . . . . GREEN</li>
           <li>Diagnostics Check . . . . GREEN</li>
           <ul>
             <li>RAM check . . . . GREEN</li>
@@ -164,33 +160,33 @@
           </ul>
           <li>Listing Visual Receptors</li>
             <ul>
-              <li>Visual Input - Partition 1 . . . . GREEN</li>
-              <li>Visual Input - Partition 2 . . . . GREEN</li>
-              <li>Visual Input - Partition 3 . . . . GREEN</li>
+              <li>Visual Input - Partition 1 . . . . <span class="failed-span" id="partition-one">FAILED</span></li>
+              <li>Visual Input - Partition 2 . . . . <span class="failed-span" id="partition-two">FAILED</span></li>
+              <li>Visual Input - Partition 3 . . . . <span class="failed-span" id="partition-three">FAILED</span></li>
               <li>Visual Input - Partition 4 . . . . GREEN</li>
-              <li>Visual Input - Partition 5 . . . . GREEN</li>
-              <li>Visual Input - Partition 6 . . . . FAILED</li>
+              <li>Visual Input - Partition 5 . . . . <span class="failed-span" id="partition-five">FAILED</span></li>
+              <li>Visual Input - Partition 6 . . . . GREEN</li>
             </ul>
-          <li>MISSING PARTITION</li>
+          <li>MISSING PARTITIONS</li>
           <li>MANUAL ACCESS REQUIRED</li>
           <li>Add the missing visual node based upon current randomized pattern.</li>
         </ul>
-        <h4>[4] [14] [11-14] [31-14] [21-13-14]</h4>
+        <h4 id="visual-puzzle-text">1 - 2 - 4 - 7 - 11 - 16 - ??</h4>
       </div>
       <!-- Puzzle Row  -->
       <div class="row">
         <ul class="option-list">
-          <li><span class="1 option">[13-21-31-14]</span></li>
-          <li><span class="2 option">[21-13-24-14]</span></li>
-          <li><span class="3 option">[31-13-12-14]</span></li>
-          <li><span class="4 option">[32-13-14-31]</span></li>
+          <li><span id="visual-one" class="1 option">18</span></li>
+          <li><span id="visual-two" class="2 option">20</span></li>
+          <li><span id="visual-three" class="3 option">22</span></li>
+          <li><span id="visual-four" class="4 option">24</span></li>
         </ul>
       </div>
       <!-- Output Row  -->
-      <div class="row">
-        <p id="tag name goes here">
-
-        </p>
+      <div class="output row">
+				<h2>Correct Input Selected. Select system functions have been restored. Contine to repair current system functions.</h2>
+				<button class="next-button" type="button" name="button">Next Puzzle</button>
+				<button class="exit-button" type="button" name="button">[HOME-ROOT]</button>
       </div>
     </div>
 
@@ -198,10 +194,11 @@
     <div class="container puzzle" id="motorPuzzle">
       <!-- Problem Row  -->
       <div class="row">
+					<h1>projectAnima (</h1>
         <ul>
           <li>Core Functions . . . . GREEN</li>
           <li>Restarting Visual Receptors . . . . GREEN</li>
-          <li>Initializing Motor Variables . . . . FAILED</li>
+          <li>Initializing Motor Variables . . . . GREEN</li>
           <li>Diagnostics Check . . . . GREEN</li>
           <ul>
             <li>Foward Port Sensor Check . . . . GREEN</li>
@@ -214,37 +211,41 @@
             <ul>
               <li>Sensor Input . . . . GREEN</li>
               <li>Left-Arm Input . . . . GREEN</li>
-              <li>Right-Arm Input . . . . GREEN</li>
+              <li>Right-Arm Input . . . . <span class="failed-span" id="right-arm">FAILED</span></li>
               <li>Left-Leg Input . . . . GREEN</li>
-              <li>Right-Leg Input . . . . GREEN</li>
-              <li>Sensor Data Processing Matrix . . . . FAILED</li>
+              <li>Right-Leg Input . . . . <span class="failed-span" id="right-arm">FAILED</span></li>
+              <li>Sensor Data Processing Matrix . . . . <span class="failed-span" id="sensor-matrix">FAILED</span>FAILED</li>
             </ul>
+					<li>PHYSICAL OUTPUT - [RIGHT] - NOT RECOGNIZED</li>
           <li>SENSOR DATA PROCESSING MATRIX NOT RECOGNIZED</li>
           <li>MANUAL ACCESS REQUIRED</li>
-          <li>Provide sense of self. Missing data on Matrix Recognition. Finish final value for the pattern below.</li>
+          <li>Provide sense of self. Missing data on Matrix Recognition. Finish final value for the patterns below.</li>
         </ul>
-        <h4>1 - 32 - 81 - 25 - " "</h4>
+        <h4 id="motor-puzzle-text">Processing Matrix power cell drain must not exceed total. Different Motivators measure the same total energy pool as either 300 small pulses or 180 large pulses. 100 small pulses have been used. Manually input the remaining large pulses to for the Motivator.</h4>
       </div>
       <!-- Puzzle Row  -->
       <div class="row">
         <ul class="option-list">
-          <li><span class="1 option">1</span></li>
-          <li><span class="2 option">3</span></li>
-          <li><span class="3 option">6</span></li>
-          <li><span class="4 option">9</span></li>
+          <li><span id="motor-one" class="1 option">60 LG pulses</span></li>
+          <li><span id="motor-two" class="2 option">120 LG pulses</span></li>
+          <li><span id="motor-three" class="3 option">180 LG pulses</span></li>
+          <li><span id="motor-four" class="4 option">200 LG pulses</span></li>
         </ul>
       </div>
       <!-- Output Row  -->
-      <div class="row">
-        <p id="tag name goes here">
-
-        </p>
+      <div class="output row">
+        <h2>Correct Input Selected. Select system functions have been restored. Contine to repair current system functions.</h2>
+				<button class="next-button" type="button" name="button">Next Puzzle</button>
+				<button class="exit-button" type="button" name="button">[HOME-ROOT]</button>
       </div>
     </div>
-
-
-
-
+		<!-- Alert Notice -->
+		<div class="container alert">
+			<h2>ALERT</h2>
+			<h5>Wrong selection inputted :: MALFUNCTION</h5>
+			<h5>Malfunctions allowed until Self-Destruct</h5>
+			<h5><span id="malfunction-count"></span>of 5</h5>
+		</div>
 
   </body>
 </html>
