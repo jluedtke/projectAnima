@@ -8,7 +8,6 @@ body {
   background-blend-mode: color;
 }
 
-
 .panel-body {
   height: 250px;
   border: none;
@@ -161,6 +160,7 @@ button:focus {
 	outline: 0;
 }
 
+
 .intro, .secKeyInput, .secKeyDisplay{
   text-align: center;
   padding: 10px;
@@ -180,4 +180,9 @@ button:focus {
 
 .secKeyDisplay .panel-body h2 {
   margin-top: 2px;
+}
+
+.office-runaway-form, .sit-form, .office-fight-form, .resist-form, .resist-two-form, .follow-form {
+  display: none;
+
 }
