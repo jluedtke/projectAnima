@@ -154,6 +154,6 @@ button:focus {
 }
 
 /*textRPG*/
-.office-runaway-form, .sit-form, .office-fight-form, .resist-form, .resist-two-form {
+.office-runaway-form, .sit-form, .office-fight-form, .resist-form, .resist-two-form, .follow-form {
   display: none;
 }
