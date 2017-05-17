@@ -17,10 +17,14 @@ $(function() {
     } else if ($(this)[0].classList[0] == "left-door-office") {
       $(".office-runaway-form").fadeOut();
       $(".office-fight-form").fadeIn();
-    } else if ($(this)[0].classList[0] == "") {
-
-    } else {
-
+    } else if ($(this)[0].classList[0] == "resist") {
+      $(".office-fight-form").fadeOut();
+      $(".resist-form").fadeIn();
+    } else if ($(this)[0].classList[0] == "resist-two") {
+      $(".resist-form").fadeOut();
+      $(".resist-two-form").fadeIn().delay(2000);
+      $(".resist-two-form").fadeOut();
+      $(".operating-room-form").fadeIn();
     }
   });
 });
