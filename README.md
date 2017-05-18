@@ -1,5 +1,5 @@
 # Project: Project Anima (Group Project)
-
+### By: Adrian Agnic, Roger Tobias, Ethan Luts, and Jared Luedtke
 
 ## Description
 
@@ -17,24 +17,32 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites/Installation
 
 * Git Clone or Download project at: http://github.com/ajagnic/projectAnima.git
+* Open all of the files in a text editor [i.e. Atom, Sublime]
+* Execute index.html.
+* Enter the correct string of text to the input field to start the game.
+
+OR
+
+* View the game on [gh-pages](http://ghpages.stuff)
+* Enter the correct string of text to the input field to start the game.
 
 
 ## Accessing the Mainframe
 
 * On game start, player is displayed the message, "I ----, therefore I am".
-The player is tasked with solving the riddle/thing and entering the correct phrase.  By doing this, the game begins,
+The player is tasked with solving the riddle and entering the correct phrase.  By doing this, the game begins,
 "Booting up, initialization, failed....main functions.. currently offline."
 
 
 ## Game Overlay/Hub, Navigating the Mainframe
 
-* Visual Pane (Top-Left)
+* Visual Panel (Top-Left)
 
-* Motor Functionality Pane (Top-Middle)
+* Motor Functionality Panel (Top-Middle)
 
-* Security Authentication Pane (Top-Right)
+* Security Authentication Panel (Top-Right)
 
-* Security Key Pane (Bottom-Left)
+* Security Key Panel (Bottom-Left)
 
 * Harmonic Memory Drive (Bottom-Right)
 
@@ -61,7 +69,7 @@ The player is tasked with solving the riddle/thing and entering the correct phra
 
 * Save Locations Occur after each puzzle.
 * Matrix Background theme, on game start.
-* Spin up a node.js server and have the game accessable.
+* Spin up a node.js server and have the game accessible.
 * Using Cookies, allow the Player to save their game.
 
 
@@ -75,4 +83,8 @@ The player is tasked with solving the riddle/thing and entering the correct phra
 
 ## Sick Feature
 
-* Crash game if the Player's attempts result in a failure more than 5 times.
+* Crash game if the Player's attempts result in a failure more than 3 times.
+
+## Legal
+Copyright (c) 2017. All Rights Reserved.
+Licensed under the MIT license.
