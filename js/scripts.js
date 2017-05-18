@@ -4,8 +4,8 @@ $(function() {
     event.preventDefault();
     if ("think" == $("#start-page-text").val().toLowerCase()) {
       $(".start-page").fadeOut();
-      $(".intro").fadeIn().delay(1600).fadeOut();
-      $("#corePuzzle").delay(1650).fadeIn();
+      $(".intro").fadeIn().delay(13000).fadeOut();
+      $("#corePuzzle").delay(13500).fadeIn();
     } else {
       return;
     };
@@ -48,7 +48,7 @@ $(function() {
 
     $("#secKey").click(function() {
       var userSecKey = $("input#secKeyInput").val().toLowerCase();
-      if(userSecKey == "iamtherobot") {
+      if(userSecKey == "i am the robot" || userSecKey == "iamtherobot") {
         document.getElementById('power-div').style.pointerEvents = 'auto';
         $(".secKeyInput").fadeOut();
         $(".game-hub").fadeIn();
@@ -137,7 +137,7 @@ $(function() {
 
           $("#visual-status").removeClass();
           $("#visual-status").text("ACCESS DENIED - ONLINE");
-					$("#motor-status").text("ACCESS GRANTED - OFFLINE");
+					$("#motor-status").text("OFFLINE");
           document.getElementById('visual-div').style.pointerEvents = 'none';
 					document.getElementById('motor-div').style.pointerEvents = 'auto'; // make clickable again
         } else if (newGame.coreState == true && newGame.puzzleState == 2) {
@@ -148,7 +148,7 @@ $(function() {
 					$(".output").fadeIn();
 				}
       } else {
-				if (newGame.malfunctionCount < 5) {
+				if (newGame.malfunctionCount < 3) {
 					newGame.malfunctionCount++
 					$("span#malfunction-count").text(newGame.malfunctionCount + " ");
 					$(".alert").slideDown().delay(3000).slideUp()
@@ -186,7 +186,7 @@ Game.prototype.solvePuzzle = function(option) {
   } else if (this.puzzleState == 2) {
     if (option == 3) { // visual node puzzle 1
       this.puzzleState++;
-      this.secKeyHints.push("Each word is 1 character longer than the previous, except the last word which is 2");
+      this.secKeyHints.push("Each word is 1 character longer than the previous, except the last word which is 2 letters longer");
       return true;
     }
   } else if (this.puzzleState == 3) {
