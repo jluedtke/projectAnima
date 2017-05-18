@@ -185,7 +185,7 @@ button:focus {
   margin-top: 2px;
 }
 
-.office-runaway-form, .sit-form, .office-fight-form, .resist-form, .resist-two-form, .follow-form, .operating-room-form, .try-escape, .hide-attempt, .ending-scene{
+.office-runaway-form, .sit-form, .office-fight-form, .resist-form, .resist-two-form, .follow-form, .operating-room-form, .try-escape-form, .hide-attempt-form, .ending-scene{
   display: none;
 
 }
