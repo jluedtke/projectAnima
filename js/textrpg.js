@@ -34,15 +34,15 @@ $(function() {
       $(".operating-room-form").fadeIn();
     } else if ($(this)[0].classList[0] == "escape") {
       $(".operating-room-form").hide();
-      $(".try-escape-form").fadeIn();
-      $(".try-escape-form").fadeOut();
-      $(".hide-attempt-form").fadeIn();
-      $(".hide-attempt-form").fadeOut();
-      $(".ending-scene").fadeIn();
+      $(".try-escape-form").fadeIn().delay(17000).fadeOut();
+      $(".hide-attempt-form").fadeIn().delay(18000).fadeOut();
+      $(".ending-scene").fadeIn().delay(19000).fadeOut();
+      setTimeout(function(){ window.close("textrpg.html") }, 20000);
     } else if ($(this)[0].classList[0] == "scan-room") {
       $(".operating-room-form").hide();
-      $(".hide-attempt-form").fadeIn();
-      $(".ending-scene").fadeIn();
+      $(".hide-attempt-form").fadeIn().delay(18000).fadeOut();
+      $(".ending-scene").fadeIn().delay(19000).fadeOut();
+      setTimeout(function(){ window.close("textrpg.html") }, 20000);
     }
 
   });
