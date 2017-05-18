@@ -8,6 +8,8 @@ body {
   background-blend-mode: color;
 }
 
+
+
 .panel-body {
   height: 250px;
   border: none;
@@ -24,10 +26,20 @@ body {
   text-align: center;
   border: 1px solid darkgreen;
   border-radius: 5px;
-
 }
 
-#start-button, .game-hub, #corePuzzle, #visualPuzzle, #motorPuzzle, .output, .exit-button, .alert, .intro, .secKeyInput, .secKeyDisplay {
+#robo-baby {
+  position: absolute;
+  left: 30%;
+  top: 20%;
+}
+
+#robo-baby img {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+#start-button, .game-hub, #corePuzzle, #visualPuzzle, #motorPuzzle, .output, .exit-button, .alert, .intro, .secKeyInput, .secKeyDisplay, #robo-baby {
   display: none;
 }
 
@@ -192,4 +204,12 @@ button:focus {
 
 .output {
   float: right;
+}
+
+.power-shadow-green {
+  box-shadow: 0 0 1000px lightgreen;
+}
+
+.power-shadow-white {
+  box-shadow: 0 0 100px white;
 }

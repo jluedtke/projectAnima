@@ -10,7 +10,10 @@
   </head>
 
   <body>
-
+    <div id="robo-baby">
+      <h2>projectAnima ( [LIVE-FEED] </h2>
+      <img src="img/robobaby.gif" alt="Your true self." />
+    </div>
 
     <!-- Start Page -->
     <div class="container">
@@ -24,7 +27,6 @@
 
     <!-- Game Hub -->
     <div class="game-hub">
-
       <div class="container top-row">
         <div class="row">
           <div class="col-md-4">
@@ -77,7 +79,7 @@
                 <br><br><br>
                 <button type="button" id="power-button" name="button">Power</button>
                 <br><br><br><br>
-                <h2 class="game-hub-status" id="power-status">ACCESS DENIED - LOCKED</h2>
+                <h2 class="game-hub-status" id="power-status">LOCKED</h2>
               </div>
             </div>
           </div>
@@ -206,8 +208,6 @@
           </div>
         </div>
       </div>
-      <!-- Output Row  -->
-
     </div>
 
     <!-- Puzzle for motorState -->
@@ -233,7 +233,7 @@
               <li>Left-Arm Input . . . . GREEN</li>
               <li>Right-Arm Input . . . . <span class="failed-span" id="right-arm">FAILED</span></li>
               <li>Left-Leg Input . . . . GREEN</li>
-              <li>Right-Leg Input . . . . <span class="failed-span" id="right-arm">FAILED</span></li>
+              <li>Right-Leg Input . . . . <span class="failed-span" id="right-leg">FAILED</span></li>
               <li>Sensor Data Processing Matrix . . . . <span class="failed-span" id="sensor-matrix">FAILED</span></li>
             </ul>
 					<li>PHYSICAL OUTPUT - [RIGHT] - NOT RECOGNIZED</li>
@@ -245,20 +245,24 @@
       </div>
       <!-- Puzzle Row  -->
       <div class="row">
-        <ul class="option-list">
-          <li><span id="motor-one" class="1 option">60 LG pulses</span></li>
-          <li><span id="motor-two" class="2 option">120 LG pulses</span></li>
-          <li><span id="motor-three" class="3 option">180 LG pulses</span></li>
-          <li><span id="motor-four" class="4 option">200 LG pulses</span></li>
-        </ul>
-      </div>
+        <div class="col-md-6">
+          <ul class="option-list">
+            <li><span id="motor-one" class="1 option">60 LG pulses</span></li>
+            <li><span id="motor-two" class="2 option">120 LG pulses</span></li>
+            <li><span id="motor-three" class="3 option">180 LG pulses</span></li>
+            <li><span id="motor-four" class="4 option">200 LG pulses</span></li>
+          </ul>
+        </div>
       <!-- Output Row  -->
-      <div class="output row">
-        <h2>Correct Input Selected. Select system functions have been restored. Contine to repair current system functions.</h2>
-				<button class="next-button" type="button" name="button">Next Puzzle</button>
-				<button class="exit-button" type="button" name="button">[HOME-ROOT]</button>
+      <div class="col-md-6">
+        <div class="output">
+          <h2>Correct Input Selected. Select system functions have been restored. Contine to repair current system functions.</h2>
+          <button class="next-button" type="button" name="button">Next Puzzle</button>
+          <button class="exit-button" type="button" name="button">[HOME-ROOT]</button>
+        </div>
       </div>
     </div>
+  </div>
 		<!-- Alert Notice -->
 		<div class="container alert">
 			<h2>ALERT</h2>
