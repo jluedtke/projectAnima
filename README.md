@@ -3,10 +3,10 @@
 
 ## Description
 
-* A text-based RPG based off solving puzzles to progress through the story and put together the 
+* A text-based RPG based off solving puzzles to progress through the story and put together the
 pieces to identifying your origins.
 
-* The player wins the game after they have successfully completed all the puzzle requirements. 
+* The player wins the game after they have successfully completed all the puzzle requirements.
 
 
 ## Getting Started
@@ -41,16 +41,18 @@ The player is tasked with solving the riddle/thing and entering the correct phra
 
 ## Specification
 
-  Player clicks a single button, INPUT: button 1, OUTPUT: button 1.
-  Player clicks multiple buttons, INPUT: button 1, button 2, OUTPUT: 1, 2.
-  Player clicks a designated "correct button".  INPUT: button 1, OUTPUT: correct.
-  Player clicks a non-designated "correct button." INPUT: Button 2, OUTPUT: Incorrect.
-  Player clicks buttons to correctly/incorrectly answer a single puzzle question. i.e, 1 + 2 = ? INPUT: 3, OUTPUT: correct.
-  Player clicks incorrect answer for designated puzzle. INPUT: Button 1, OUTPUT: Alert Message is displayed.
-  
+  * Player clicks a single button [INPUT: button 1, OUTPUT: button 1.]
+  * Player clicks multiple buttons [INPUT: button 1, button 2, OUTPUT: 1, 2.]
+  * Player clicks a designated "correct button".  [INPUT: button 1, OUTPUT: correct.]
+  * Player clicks a non-designated "correct button." [INPUT: Button 2, OUTPUT: Incorrect.]
+  * Player clicks buttons to correctly/incorrectly answer a single puzzle question. i.e, 1 + 2 = ? [INPUT: 3, OUTPUT: correct.]
+  * Player clicks incorrect answer for designated puzzle. [INPUT: Button 1, OUTPUT: Alert Message is displayed.]
+
 
 ## Built With
-
+* HTML5
+* CSS
+* JavaScript
 * [jQuery](http://jquery.com/download/) - A JavaScript library for manipulating the DOM with ease.
 * [Bootstrap](getbootstrap.com) - A front end framework for creating user interfaces.
 
@@ -73,5 +75,4 @@ The player is tasked with solving the riddle/thing and entering the correct phra
 
 ## Sick Feature
 
-* Crash game if the Player's attempts result in a failure more than 5 times. 
-
+* Crash game if the Player's attempts result in a failure more than 5 times.
