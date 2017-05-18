@@ -175,6 +175,14 @@ button:focus {
 	outline: 0;
 }
 
+#corePuzzle .row h2 {
+  text-align: center;
+}
+
+#corePuzzle .row h3 {
+  text-align: center;
+}
+
 
 
 .intro, .secKeyInput, .secKeyDisplay{

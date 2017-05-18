@@ -28,6 +28,7 @@
     </div>
 
     <!-- Game Hub -->
+    <audio id="clicksound" src="click.ogg" ></audio>
     <div class="game-hub">
       <div class="container top-row">
         <div class="row">
@@ -137,10 +138,13 @@
       <!-- Problem Row  -->
       <div class="row">
 				<h1>projectAnima (</h1>
-        <h2>
-          Everything is darkness. You see the status of the 3 core nodes. You find you can fix the problem by choosing which node is working. The status of the three nodes is below, and below that is where you fix the working node.
-        </h2>
-				<h3>The three system nodes to the Core Processing Matix are below. Two of the three nodes are incorrect. Manual input required. Select the core system node that is reporting correctly.</h3>
+        <h2>--Core Processing Matrix--</h2>
+        <ul>
+          <li>Node 1: Accessing . . . <span class="failed-span">ERROR</span></li>
+          <li>Node 2: Accessing . . . <span class="failed-span">ERROR</span></li>
+          <li>Node 3: Accessing . . . <span class="failed-span">ERROR</span></li>
+        </ul>
+				<h3>The three system nodes to the Core Processing Matix indexed below. Two nodes are incorrect. Manual input required. Select core system node that is reporting correctly.</h3>
         <ul>
           <li>Node 1 is reporting that Node 2 is malfunctioning.</li>
           <li>Node 2 is reporting that Node 3 is malfunctioning.</li>
@@ -150,9 +154,9 @@
       <!-- Puzzle Row  -->
       <div class="row">
         <ul class="option-list">
-          <li><span class="1 option">Node 1 is reporting correctly.</span></li>
-          <li><span class="2 option">Node 2 is reporting correctly.</span></li>
-          <li><span class="3 option">Node 3 is reporting correctly.</span></li>
+          <li><span class="1 option">-Node 1 is reporting correctly.</span></li>
+          <li><span class="2 option">-Node 2 is reporting correctly.</span></li>
+          <li><span class="3 option">-Node 3 is reporting correctly.</span></li>
         </ul>
       </div>
       <!-- Output Row  -->
@@ -196,10 +200,10 @@
       <div class="row">
         <div class="col-md-6">
           <ul class="option-list">
-            <li><span id="visual-one" class="1 option">18</span></li>
-            <li><span id="visual-two" class="2 option">20</span></li>
-            <li><span id="visual-three" class="3 option">22</span></li>
-            <li><span id="visual-four" class="4 option">24</span></li>
+            <li><span id="visual-one" class="1 option">- 18 -</span></li>
+            <li><span id="visual-two" class="2 option">- 20 -</span></li>
+            <li><span id="visual-three" class="3 option">- 22 -</span></li>
+            <li><span id="visual-four" class="4 option">- 24 -</span></li>
           </ul>
         </div>
         <div class="col-md-6">

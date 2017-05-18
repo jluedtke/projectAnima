@@ -4,8 +4,8 @@ $(function() {
     event.preventDefault();
     if ("think" == $("#start-page-text").val().toLowerCase()) {
       $(".start-page").fadeOut();
-      $(".intro").fadeIn().delay(1700).fadeOut();
-      $("#corePuzzle").delay(1750).fadeIn();
+      $(".intro").fadeIn().delay(1600).fadeOut();
+      $("#corePuzzle").delay(1650).fadeIn();
     } else {
       return;
     };
@@ -18,6 +18,7 @@ $(function() {
 
 
     $("div.hub-option").click(function() {
+      play();
       if ($(this)[0].classList[0] == "visual") {
         $(".game-hub").fadeOut();
         $("#visualPuzzle").fadeIn();
@@ -64,33 +65,33 @@ $(function() {
 			if (nextPuzzle == 3) { // visual node puzzle 2
 				$("#partition-one").text("GREEN").removeClass();
 				$("#visual-puzzle-text").text("21 - 18 - 16 - 15 - 15 - 16 - ??");
-				$("#visual-one").text("15");
-				$("#visual-two").text("16");
-				$("#visual-three").text("22");
-				$("#visual-four").text("18");
+				$("#visual-one").text("- 15 -");
+				$("#visual-two").text("- 16 -");
+				$("#visual-three").text("- 22 -");
+				$("#visual-four").text("- 18 -");
 			} else if (nextPuzzle == 4) { // visual node puzzle 3
 				$("#partition-two").text("GREEN").removeClass();
 				$("#visual-puzzle-text").text("1 - 2 - 4 - 8 - 16 - 32 - ??");
-				$("#visual-one").text("64");
-				$("#visual-two").text("128");
-				$("#visual-three").text("48");
-				$("#visual-four").text("46");
+				$("#visual-one").text("- 64 -");
+				$("#visual-two").text("- 128 -");
+				$("#visual-three").text("- 48 -");
+				$("#visual-four").text("- 46 -");
 			} else if (nextPuzzle == 5) { // visual node puzzle 4
 				$("#partition-three").text("GREEN").removeClass();
 				$("#visual-puzzle-text").text("128 - 64 - 32 - 16 - 8 - 4 - ??");
-				$("#visual-one").text("8");
-				$("#visual-two").text("2");
-				$("#visual-three").text("0.5");
-				$("#visual-four").text("4");
+				$("#visual-one").text("- 8 -");
+				$("#visual-two").text("- 2 -");
+				$("#visual-three").text("- 0.5 -");
+				$("#visual-four").text("- 4 -");
 				nextPuzzle += 1; // to keep in line with motor function puzzle 2
 
 			} else if (nextPuzzle == 7) { // motor function puzzle 2
 				$("#sensor-matrix").text("GREEN").removeClass();
 				$("#motor-puzzle-text").text("Data missing from Prime Values: 1*2*5*11*13*17*19 Recalibrate system with manual placement of prime value.");
-				$("#motor-one").text("7");
-				$("#motor-two").text("9");
-				$("#motor-three").text("15");
-				$("#motor-four").text("21");
+				$("#motor-one").text("- 7 -");
+				$("#motor-two").text("- 9 -");
+				$("#motor-three").text("- 15 -");
+				$("#motor-four").text("- 21 -");
 			} else if (nextPuzzle == 8) { // motor function puzzle 3
 				$("#right-arm").text("GREEN").removeClass();
 				$("#motor-puzzle-text").text("Data missing from [RIGHT-LEG] memory node: [4] [14] [11-14] [31-14] [21-13-14] [3?-13-??-??]");
@@ -227,4 +228,9 @@ Game.prototype.solvePuzzle = function(option) {
 			return true;
 		}
 	}
+}
+
+function play() {
+  var audio = document.getElementById("clicksound");
+  audio.play();
 }
