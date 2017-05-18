@@ -1,5 +1,6 @@
 # Project: Project Anima (Group Project)
 
+
 ## Description
 
 * A text-based RPG based off solving puzzles to progress through the story and put together the 
@@ -16,13 +17,12 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites/Installation
 
 * Git Clone or Download project at: http://github.com/ajagnic/projectAnima.git
-* View GitHub Pages at: 
 
 
-##  Accessing the Mainframe
+## Accessing the Mainframe
 
 * On game start, player is displayed the message, "I ----, therefore I am".
-The player is tasked with solving the riddle/thing and entering the correct phrase.  By doing this, the game begins, or in a sense,
+The player is tasked with solving the riddle/thing and entering the correct phrase.  By doing this, the game begins,
 "Booting up, initialization, failed....main functions.. currently offline."
 
 
@@ -41,10 +41,13 @@ The player is tasked with solving the riddle/thing and entering the correct phra
 
 ## Specification
 
-* Player clicks an element on the screen and inserts in the correct phrase to enter the game. Output => navigated to main game hub.
-
-* In game Puzzles - Input: Player is tasked with selecting the correct option. Output => Player unlocks another segment of the game. In the case that the Player fails a puzzle, they have a number of attempts before the game is over.
-
+  Player clicks a single button, INPUT: button 1, OUTPUT: button 1.
+  Player clicks multiple buttons, INPUT: button 1, button 2, OUTPUT: 1, 2.
+  Player clicks a designated "correct button".  INPUT: button 1, OUTPUT: correct.
+  Player clicks a non-designated "correct button." INPUT: Button 2, OUTPUT: Incorrect.
+  Player clicks buttons to correctly/incorrectly answer a single puzzle question. i.e, 1 + 2 = ? INPUT: 3, OUTPUT: correct.
+  Player clicks incorrect answer for designated puzzle. INPUT: Button 1, OUTPUT: Alert Message is displayed.
+  
 
 ## Built With
 
@@ -54,8 +57,10 @@ The player is tasked with solving the riddle/thing and entering the correct phra
 
 ## Coming Soon(Cool things that most likely  won't happen till v2.0.)
 
-* Matrix Background theme, on game start, 
-* Picture of a power button  
+* Save Locations Occur after each puzzle.
+* Matrix Background theme, on game start.
+* Spin up a node.js server and have the game accessable.
+* Using Cookies, allow the Player to save their game.
 
 
 ## Authors
@@ -66,7 +71,7 @@ The player is tasked with solving the riddle/thing and entering the correct phra
 * Ethan Luts (https://github.com/eluts15)
 
 
-## Known Feature
+## Sick Feature
 
 * Crash game if the Player's attempts result in a failure more than 5 times. 
 
