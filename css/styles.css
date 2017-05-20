@@ -30,8 +30,8 @@ body {
 
 #robo-baby {
   position: absolute;
-  left: 30%;
-  top: 20%;
+  left: 20%;
+  top: 5%;
 }
 
 #robo-baby img {
@@ -81,9 +81,7 @@ body {
 
 .mid-row {
   position: absolute;
-  top: 39%;
-  left: 15%;
-  width: 60%;
+  top: 33%;
 }
 
 .bot-row {
@@ -96,11 +94,11 @@ body {
 }
 
 .panel-body h3 {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .panel-body h2{
-  font-size: 32px;
+  font-size: 22px;
 }
 
 #corePuzzle, #visualPuzzle, #motorPuzzle, .intro, .secKeyInput, .secKeyDisplay {
@@ -111,6 +109,12 @@ body {
   border: 5px solid gray;
   box-shadow: 0 0 100px white;
   border-radius: 15px;
+}
+
+.secKeyDisplay {
+	position: inherit;
+	width: 300px;
+	float: right;
 }
 
 #corePuzzle .row, #visualPuzzle .row, #motorPuzzle .row {
@@ -196,10 +200,6 @@ button:focus {
   padding: 0px;
   text-align: left;
   list-style-type: decimal;
-}
-
-.mid-row .col-md-4 {
-  width: 430px;
 }
 
 .secKeyDisplay .panel-body h2 {

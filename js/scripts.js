@@ -38,7 +38,7 @@ $(function() {
       } else if ($(this)[0].classList[0] == "memory") {
         window.open("textrpg.html");
       } else if ($(this)[0].classList[0] == "power") {
-        console.log($(this)[0].classList[0]);
+				document.getElementById('power-div').style.pointerEvents = 'none';
         $(".panel").addClass( "power-shadow-green" );
         $(".panel-body").addClass( "power-shadow-white" );
         $(".game-hub").show().delay(500).fadeOut(1000);
